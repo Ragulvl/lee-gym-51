@@ -134,41 +134,50 @@ const Index = () => {
   const pricingPlans = [
     {
       name: "Monthly",
-      price: "₹2,999",
+      price: "₹1,000",
       period: "/month",
+      admissionFee: "₹500",
       features: [
         "Access to all equipment",
-        "Group fitness classes",
-        "Locker room access",
-        "Free WiFi",
-        "Basic fitness assessment"
+        "Nutrition consultation",
+        "Monthly body composition analysis"
       ],
       popular: false
     },
     {
-      name: "Quarterly",
-      price: "₹7,999",
+      name: "3 Months",
+      price: "₹2,500",
       period: "/3 months",
+      admissionFee: "₹500",
       features: [
-        "Everything in Monthly",
-        "1 personal training session",
+        "Access to all equipment",
         "Nutrition consultation",
-        "Guest passes (2/month)",
-        "Priority class booking"
+        "Monthly body composition analysis"
       ],
       popular: true
     },
     {
-      name: "Yearly",
-      price: "₹24,999",
-      period: "/year",
+      name: "8 Months Special",
+      price: "₹5,000",
+      period: "/8 months (5+3 free)",
+      admissionFee: "₹500",
       features: [
-        "Everything in Quarterly",
-        "4 personal training sessions",
+        "Access to all equipment",
+        "Nutrition consultation",
+        "Monthly body composition analysis"
+      ],
+      popular: false
+    },
+    {
+      name: "Premium Annual",
+      price: "₹10,000",
+      period: "/12 months",
+      admissionFee: "₹500",
+      features: [
+        "Access to all equipment",
+        "Nutrition consultation",
         "Monthly body composition analysis",
-        "Unlimited guest passes",
-        "Exclusive member events",
-        "Supplement discounts"
+        "Priority booking"
       ],
       popular: false
     }
@@ -585,7 +594,7 @@ const Index = () => {
       <section id="pricing" className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <h2 className="section-header">Membership Plans</h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <Card 
                 key={plan.name} 
@@ -604,6 +613,9 @@ const Index = () => {
                   <div className="text-4xl font-black text-primary">
                     {plan.price}
                     <span className="text-lg text-muted-foreground font-normal">{plan.period}</span>
+                  </div>
+                  <div className="text-sm text-muted-foreground mt-2">
+                    + {plan.admissionFee} admission fee
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-4">
