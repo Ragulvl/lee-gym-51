@@ -684,28 +684,8 @@ const Index = () => {
       <section id="contact" className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <h2 className="section-header">Get In Touch</h2>
-          <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {/* Contact Form */}
-            <div className="lg:col-span-1">
-              <Card className="gym-card h-fit">
-                <CardHeader>
-                  <CardTitle className="text-2xl font-bold">Send us a Message</CardTitle>
-                  <CardDescription>
-                    Ready to start your fitness journey? Contact us today!
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <Input placeholder="Your Name" />
-                  <Input type="email" placeholder="Your Email" />
-                  <Input type="tel" placeholder="Your Mobile Number (+91)" />
-                  <Textarea placeholder="Your Message" rows={4} />
-                  <Button className="w-full">Send Message</Button>
-                </CardContent>
-              </Card>
-            </div>
-
+          <div className="max-w-4xl mx-auto space-y-8">
             {/* Contact Info and Map */}
-            <div className="lg:col-span-2 space-y-6">
               <Card className="gym-card">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold mb-6">Visit Our Gym</h3>
@@ -782,7 +762,6 @@ const Index = () => {
 
               {/* Interactive Map */}
               <Map />
-            </div>
           </div>
         </div>
       </section>
