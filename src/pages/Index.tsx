@@ -745,33 +745,33 @@ const Index = () => {
                       <div className="w-full">
                         <p className="font-semibold mb-3">Hours</p>
                         <div className="space-y-1 text-sm">
-                          <div className="flex justify-between">
+                          <div className="flex justify-between items-center">
                             <span className="text-muted-foreground">Mon:</span>
-                            <span className="text-muted-foreground font-medium">5:30 AM - 9:00 PM</span>
+                            <span className="text-muted-foreground font-medium text-right">5:30 AM - 9:00 PM</span>
                           </div>
-                          <div className="flex justify-between">
+                          <div className="flex justify-between items-center">
                             <span className="text-muted-foreground">Tue:</span>
-                            <span className="text-muted-foreground font-medium">5:30 AM - 9:00 PM</span>
+                            <span className="text-muted-foreground font-medium text-right">5:30 AM - 9:00 PM</span>
                           </div>
-                          <div className="flex justify-between">
+                          <div className="flex justify-between items-center">
                             <span className="text-muted-foreground">Wed:</span>
-                            <span className="text-muted-foreground font-medium">5:00 AM - 9:00 PM</span>
+                            <span className="text-muted-foreground font-medium text-right">5:00 AM - 9:00 PM</span>
                           </div>
-                          <div className="flex justify-between">
+                          <div className="flex justify-between items-center">
                             <span className="text-muted-foreground">Thu:</span>
-                            <span className="text-muted-foreground font-medium">5:30 AM - 9:00 PM</span>
+                            <span className="text-muted-foreground font-medium text-right">5:30 AM - 9:00 PM</span>
                           </div>
-                          <div className="flex justify-between">
+                          <div className="flex justify-between items-center">
                             <span className="text-muted-foreground">Fri:</span>
-                            <span className="text-muted-foreground font-medium">5:30 AM - 9:00 PM</span>
+                            <span className="text-muted-foreground font-medium text-right">5:30 AM - 9:00 PM</span>
                           </div>
-                          <div className="flex justify-between">
+                          <div className="flex justify-between items-center">
                             <span className="text-muted-foreground">Sat:</span>
-                            <span className="text-muted-foreground font-medium">5:30 AM - 8:00 PM</span>
+                            <span className="text-muted-foreground font-medium text-right">5:30 AM - 8:00 PM</span>
                           </div>
-                          <div className="flex justify-between">
+                          <div className="flex justify-between items-center">
                             <span className="text-muted-foreground">Sun:</span>
-                            <span className="text-red-500 font-medium">Closed</span>
+                            <span className="text-red-500 font-medium text-right">Closed</span>
                           </div>
                         </div>
                       </div>
