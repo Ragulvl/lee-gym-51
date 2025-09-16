@@ -58,27 +58,33 @@ const Index = () => {
   // Testimonial carousel
   const testimonials = [
     {
-      name: "Priya Sharma",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Priya&backgroundColor=b6e3f4,c0aede,d1d4f9",
-      text: "Lee Gym transformed my life! Lost 15 kgs and gained so much confidence. The trainers are amazing!",
+      name: "Ragul VL",
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Ragul&backgroundColor=b6e3f4,c0aede,d1d4f9",
+      text: "Trainer Charlie helped me get my body fit and assisted me with weight loss. Amazing support!",
       rating: 5
     },
     {
-      name: "Arjun Patel",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Arjun&backgroundColor=b6e3f4,c0aede,d1d4f9",
-      text: "Best gym in Coimbatore! Modern equipment, clean facilities, and the staff really cares about your progress.",
+      name: "Robert Mithran",
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Robert&backgroundColor=b6e3f4,c0aede,d1d4f9",
+      text: "Trainer Charlie helped me achieve my fitness goals and get into great shape.",
       rating: 5
     },
     {
-      name: "Sneha Gupta",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sneha&backgroundColor=b6e3f4,c0aede,d1d4f9",
-      text: "The yoga classes here are incredible. Perfect balance of strength training and mindfulness.",
+      name: "Yogesh",
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Yogesh&backgroundColor=b6e3f4,c0aede,d1d4f9",
+      text: "The equipment in the gym is absolutely great! Everything you need for a complete workout.",
       rating: 5
     },
     {
-      name: "Rohit Singh",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Rohit&backgroundColor=b6e3f4,c0aede,d1d4f9",
-      text: "Personal training sessions helped me reach goals I never thought possible. Highly recommend!",
+      name: "Mohammed Yaqub",
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Mohammed&backgroundColor=b6e3f4,c0aede,d1d4f9",
+      text: "Trainer Charlie helped me lose weight effectively. Really grateful for the excellent guidance!",
+      rating: 5
+    },
+    {
+      name: "Harihara Sudhan",
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Harihara&backgroundColor=b6e3f4,c0aede,d1d4f9",
+      text: "He provided me with an excellent diet plan for my bulking goals and weight gain journey.",
       rating: 5
     }
   ];
