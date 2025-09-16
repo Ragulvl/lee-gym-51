@@ -170,8 +170,8 @@ const Index = () => {
     },
     {
       name: "Premium Annual",
-      price: "₹10,000",
-      period: "/12 months",
+      price: "₹8,000",
+      period: "/12 months (9+3 free)",
       admissionFee: "₹500",
       features: [
         "Access to all equipment",
@@ -594,11 +594,11 @@ const Index = () => {
       <section id="pricing" className="py-20 bg-muted">
         <div className="container mx-auto px-4">
           <h2 className="section-header">Membership Plans</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <Card 
                 key={plan.name} 
-                className={`gym-card relative ${plan.popular ? 'border-primary border-2 scale-105' : ''} slide-up`}
+                className={`gym-card relative ${plan.popular ? 'border-primary border-2 scale-105' : ''} slide-up h-full flex flex-col`}
                 style={{animationDelay: `${index * 0.1}s`}}
               >
                 {plan.popular && (
@@ -608,27 +608,29 @@ const Index = () => {
                     </Badge>
                   </div>
                 )}
-                <CardHeader className="text-center">
-                  <CardTitle className="text-2xl font-bold">{plan.name}</CardTitle>
-                  <div className="text-4xl font-black text-primary">
+                <CardHeader className="text-center pb-4">
+                  <CardTitle className="text-xl font-bold mb-3">{plan.name}</CardTitle>
+                  <div className="text-3xl font-black text-primary mb-2">
                     {plan.price}
-                    <span className="text-lg text-muted-foreground font-normal">{plan.period}</span>
                   </div>
-                  <div className="text-sm text-muted-foreground mt-2">
+                  <div className="text-sm text-muted-foreground mb-2">
+                    {plan.period}
+                  </div>
+                  <div className="text-xs text-muted-foreground">
                     + {plan.admissionFee} admission fee
                   </div>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <ul className="space-y-3">
+                <CardContent className="space-y-4 flex-grow flex flex-col">
+                  <ul className="space-y-3 flex-grow">
                     {plan.features.map((feature) => (
-                      <li key={feature} className="flex items-center text-sm">
-                        <CheckCircle className="w-4 h-4 text-primary mr-3 flex-shrink-0" />
-                        {feature}
+                      <li key={feature} className="flex items-start text-sm">
+                        <CheckCircle className="w-4 h-4 text-primary mr-3 flex-shrink-0 mt-0.5" />
+                        <span className="leading-tight">{feature}</span>
                       </li>
                     ))}
                   </ul>
                   <Button 
-                    className="w-full mt-6"
+                    className="w-full mt-auto"
                     variant={plan.popular ? "default" : "outline"}
                     onClick={() => scrollToSection('contact')}
                   >
