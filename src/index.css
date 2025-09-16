@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Lee Gym Design System - Bold, Energetic, Modern Fitness Theme
+All colors MUST be HSL. Black, Yellow, White color scheme.
+*/
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Primary - Bold Yellow */
+    --primary: 52 100% 50%;
+    --primary-foreground: 0 0% 5%;
+
+    /* Secondary - Dark with Yellow Accent */
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 95%;
+
+    /* Muted Grays */
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    /* Accent - Bright Yellow */
+    --accent: 52 100% 50%;
+    --accent-foreground: 0 0% 5%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 52 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom Gym Theme Colors */
+    --gym-black: 0 0% 5%;
+    --gym-yellow: 52 100% 50%;
+    --gym-yellow-glow: 52 100% 60%;
+    --gym-white: 0 0% 95%;
+    --gym-gray: 0 0% 15%;
+    --gym-gray-light: 0 0% 25%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--gym-yellow)), hsl(var(--gym-yellow-glow)));
+    --gradient-dark: linear-gradient(135deg, hsl(var(--gym-black)), hsl(var(--gym-gray)));
+    --gradient-hero: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+
+    /* Shadows */
+    --shadow-glow: 0 0 30px hsl(var(--gym-yellow) / 0.3);
+    --shadow-card: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
+    --shadow-button: 0 4px 15px hsl(var(--gym-yellow) / 0.4);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Light mode (not used - gym theme is dark) */
+  .light {
+    --background: 0 0% 95%;
+    --foreground: 0 0% 5%;
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 5%;
+    --primary: 52 100% 45%;
+    --primary-foreground: 0 0% 95%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-bold;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--gym-black));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--gym-yellow));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--gym-yellow-glow));
+  }
+
+  /* Image Performance Optimizations */
+  img {
+    @apply block max-w-full h-auto;
+  }
+
+  img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  img[loading="lazy"].loaded {
+    opacity: 1;
+  }
+}
+
+@layer components {
+  /* Hero Button */
+  .hero-button {
+    @apply bg-gradient-to-r from-yellow-400 to-yellow-500 text-black font-bold py-4 px-8 rounded-lg text-lg;
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-lg;
+    box-shadow: var(--shadow-button);
+  }
+
+  .hero-button:hover {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Section Headers */
+  .section-header {
+    @apply text-4xl md:text-5xl font-black text-center mb-16;
+    @apply bg-gradient-to-r from-yellow-400 to-yellow-500 bg-clip-text text-transparent;
+  }
+
+  /* Card Hover Effects */
+  .gym-card {
+    @apply bg-card border border-border rounded-xl p-6;
+    @apply transition-all duration-300 hover:scale-105;
+    box-shadow: var(--shadow-card);
+  }
+
+  .gym-card:hover {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Glow Text */
+  .glow-text {
+    text-shadow: 0 0 20px hsl(var(--gym-yellow) / 0.5);
+  }
+
+  /* Smooth Animations */
+  .fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+
+  .slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Pulse Animation */
+  .pulse-glow {
+    animation: pulseGlow 2s infinite;
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(var(--gym-yellow) / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(var(--gym-yellow) / 0.6);
+    }
+  }
+}
