@@ -15,6 +15,7 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "0.0.0.0",
     port: 8080,
+    allowedHosts: true,
     hmr: {
       port: 8080,
     },
