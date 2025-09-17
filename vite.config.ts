@@ -11,22 +11,31 @@ try {
 }
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
-  server: {
-    host: "0.0.0.0",
-    port: 8080,
-    allowedHosts: true,
-    hmr: {
-      port: 8080,
+export default defineConfig(({ mode }) => {
+  const port = parseInt(process.env.PORT as string) || 5000;
+  
+  return {
+    server: {
+      host: "0.0.0.0",
+      port: port,
+      allowedHosts: true,
+      hmr: {
+        port: port,
+        clientPort: port,
+      },
+      watch: {
+        usePolling: true,
+        interval: 1000,
+      },
     },
-  },
-  plugins: [
-    react(),
-    mode === "development" && componentTagger && componentTagger()
-  ].filter(Boolean),
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
+    plugins: [
+      react(),
+      mode === "development" && componentTagger && componentTagger()
+    ].filter(Boolean),
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "./src"),
+      },
     },
-  },
-}));
+  };
+});
