@@ -59,31 +59,31 @@ const Index = () => {
   const testimonials = [
     {
       name: "Ragul VL",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Ragul&backgroundColor=b6e3f4,c0aede,d1d4f9",
+      image: "https://api.dicebear.com/7.x/male/svg?seed=Ragul&backgroundColor=b6e3f4,c0aede,d1d4f9",
       text: "Trainer Charlie helped me get my body fit and assisted me with weight loss. Amazing support!",
       rating: 5
     },
     {
       name: "Robert Mithran",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Robert&backgroundColor=b6e3f4,c0aede,d1d4f9",
+      image: "https://api.dicebear.com/7.x/male/svg?seed=Robert&backgroundColor=b6e3f4,c0aede,d1d4f9",
       text: "Trainer Charlie helped me achieve my fitness goals and get into great shape.",
       rating: 5
     },
     {
       name: "Yogesh",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Yogesh&backgroundColor=b6e3f4,c0aede,d1d4f9",
+      image: "https://api.dicebear.com/7.x/male/svg?seed=Yogesh&backgroundColor=b6e3f4,c0aede,d1d4f9",
       text: "The equipment in the gym is absolutely great! Everything you need for a complete workout.",
       rating: 5
     },
     {
       name: "Mohammed Yaqub",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Mohammed&backgroundColor=b6e3f4,c0aede,d1d4f9",
+      image: "https://api.dicebear.com/7.x/male/svg?seed=Mohammed&backgroundColor=b6e3f4,c0aede,d1d4f9",
       text: "Trainer Charlie helped me lose weight effectively. Really grateful for the excellent guidance!",
       rating: 5
     },
     {
       name: "Harihara Sudhan",
-      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Harihara&backgroundColor=b6e3f4,c0aede,d1d4f9",
+      image: "https://api.dicebear.com/7.x/male/svg?seed=Harihara&backgroundColor=b6e3f4,c0aede,d1d4f9",
       text: "He provided me with an excellent diet plan for my bulking goals and weight gain journey.",
       rating: 5
     }
@@ -312,7 +312,7 @@ const Index = () => {
             </span>
           </h1>
             <p className="text-xl md:text-2xl mb-8 text-muted-foreground max-w-2xl mx-auto">
-              Join our community of fitness enthusiasts and achieve your goals with professional trainers, modern equipment, and proven results.
+              Join our unisex fitness community and achieve your goals with professional trainers, modern equipment, and proven results for all.
             </p>
           <Button 
             onClick={() => scrollToSection('contact')}
@@ -330,15 +330,15 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="fade-in">
               <p className="text-lg mb-6 text-muted-foreground">
-                For over a decade, Lee Gym has been the premier fitness destination in Coimbatore, 
-                helping thousands transform their lives through fitness. Our state-of-the-art 
+                For over a decade, Lee Gym has been the premier unisex fitness destination in Coimbatore, 
+                helping thousands of men and women transform their lives through fitness. Our state-of-the-art 
                 facility combines cutting-edge equipment with expert guidance to deliver 
-                unmatched results.
+                unmatched results for everyone.
               </p>
               <p className="text-lg mb-6 text-muted-foreground">
                 Whether you're a beginner starting your fitness journey or an experienced 
                 athlete pushing your limits, our team of certified trainers will support 
-                you every step of the way.
+                you every step of the way, regardless of your gender or fitness level.
               </p>
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div>
